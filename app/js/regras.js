@@ -14,7 +14,7 @@ const PedalaRegras = (function () {
   }
 
   function validarIdade(idade) {
-    return Number.isInteger(idade) && idade > IDADE_MINIMA;
+    return Number.isInteger(idade) && idade >= IDADE_MINIMA;
   }
 
   function validarCodigoBike(codigo) {
@@ -69,7 +69,7 @@ const PedalaRegras = (function () {
     if (valor >= 100) {
       return centavos(valor * 0.2);
     }
-    if (valor > 50) {
+    if (valor >= 50) {
       return centavos(valor * 0.1);
     }
     return 0;
